@@ -1,0 +1,94 @@
+.back {
+   
+    background-image: linear-gradient(45deg, #7175da, #9790F2);
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+.container
+{
+    width: 80%;
+    margin: auto;
+}
+h1{
+    text-align: left;
+    color: white;
+    font-size: 40px;
+}
+.course {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    margin: 20px;
+    overflow: hidden;
+    width: 700px;
+}
+
+.course-preview {
+    background-color: #2A265F;
+    color: #fff;
+    padding: 30px;
+    width: 300px;
+}
+
+.course-info {
+    padding: 30px;
+    position: relative;
+    width: 100%;
+
+}
+
+.course-info p {
+    padding-bottom: 2%;
+}
+
+
+.btn {
+    text-decoration: none;
+    background-color: #2A265F;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 25px;
+    flex-basis: 15%;
+    letter-spacing: 1px;
+    margin-right: 2%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+form input {
+    border-radius: 30px;
+}
+
+form button {
+    border-radius: 20px;
+    background-color: aqua;
+}
+
+.searchform {
+    position: absolute;
+    right: 20px;
+}
+
+.flex {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}

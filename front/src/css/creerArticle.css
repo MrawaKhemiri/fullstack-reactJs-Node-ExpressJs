@@ -1,0 +1,40 @@
+ .back {
+     
+     margin: auto;
+     background-image: linear-gradient(45deg, #7175da, #9790F2);
+     font-family: 'Muli', sans-serif;
+     
+     padding-bottom: 2%;
+ }
+
+ h1 {
+     color: white;
+     text-align: center;
+ }
+ .container {
+     width: 80%;
+     margin: auto;
+ }
+
+ .form-style-9 {
+     width: 100%;
+
+     background: #FAFAFA;
+     padding: 30px;
+     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+     border-radius: 10px;
+     border: 6px solid #305A72;
+ }
+
+ input[type="text"] {
+     margin: 1%;
+ }
+.select
+{
+    width: 13%;
+}
+ textarea {
+     width: 90%;
+     padding: 1%;
+     margin: 1%;
+ }

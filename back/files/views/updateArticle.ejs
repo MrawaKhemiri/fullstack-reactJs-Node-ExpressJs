@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			width: 80%;
+			margin: auto;
+			background-image: linear-gradient(45deg, #7175da, #9790F2);
+			font-family: 'Muli', sans-serif;
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+
+		}
+
+		h1 {
+			color: white;
+			text-align: center;
+		}
+
+		.form-style-9 {
+			width: 100%;
+
+			background: #FAFAFA;
+			padding: 30px;
+			box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+			border-radius: 10px;
+			border: 6px solid #305A72;
+		}
+
+		input[type="text"] {
+			margin: 1%;
+		}
+
+		textarea {
+			width: 90%;
+			padding: 1%;
+			margin: 1%;
+		}
+
+		.form-style-9 ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		.form-style-9 ul li {
+			display: block;
+			margin-bottom: 10px;
+			min-height: 35px;
+		}
+
+		.form-style-9 ul li .field-style {
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			padding: 8px;
+			outline: none;
+			border: 1px solid #B0CFE0;
+
+
+
+
+		}
+
+		.form-style-9 ul li .field-style:focus {
+			box-shadow: 0 0 5px #B0CFE0;
+			border: 1px solid #B0CFE0;
+		}
+
+		.form-style-9 ul li .field-full {
+			width: 100%;
+		}
+
+		.form-style-9 ul li input.align-left {
+			float: left;
+		}
+
+		.form-style-9 ul li input.align-right {
+			float: right;
+		}
+
+		.form-style-9 ul li textarea {
+			width: 100%;
+			height: 100px;
+		}
+
+		.form-style-9 ul li input[type="button"],
+		.form-style-9 ul li input[type="submit"] {
+			-moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+			-webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+			box-shadow: inset 0px 1px 0px 0px #3985B1;
+			background-color: #216288;
+			border: 1px solid #17445E;
+			display: inline-block;
+			cursor: pointer;
+			color: #FFFFFF;
+			padding: 8px 18px;
+			text-decoration: none;
+			font: 12px Arial, Helvetica, sans-serif;
+		}
+
+		.form-style-9 ul li input[type="button"]:hover,
+		.form-style-9 ul li input[type="submit"]:hover {
+			background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+			background-color: #28739E;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Create new article</h1>
+	<form method="post" class="form-style-9">
+		<input type="text" name="title" class="field-style field-split align-left" value="<%= article.title %>"><br>
+		<textarea name="content" class="field-style" placeholder="Message"><%= article.content %></textarea><br>
+
+		<select name="category" id="">
+			
+			<% categories.forEach(category=>{ %>
+				{# # la fonction equals() pour comparer deux objectId du mongoose # #}
+				<% if(category._id.equals(article.category._id)){ %>
+					<option value="<%= category._id%>" selected>
+						<%= category.title%>
+					</option>
+					<% }else{%>
+						<option value="<%= category._id%>">
+							<%= category.title%>
+						</option>
+						<%}%>
+							<%})%>
+		</select>
+		<br />
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</body>
+
+</html>
